@@ -1,0 +1,18 @@
+{
+  "name": "es6-workshop",
+  "version": "1.0.0",
+  "description": "A test-driven workshop on ES6",
+  "private": true,
+  "homepage": "https://github.com/callahad/es6-workshop",
+  "repository": "callahad/es6-workshop",
+  "bugs": "https://github.com/callahad/es6-workshop/issues",
+  "scripts": {
+    "test": "ava --timeout=5s",
+    "watch": "ava --timeout=5s --verbose --watch"
+  },
+  "author": "Dan Callahan <dan.callahan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ava": "^0.14.0"
+  }
+}
