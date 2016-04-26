@@ -45,11 +45,11 @@ test.skip('There is a new `class` definition syntax', t => {
   t.is(hulk.alias, 'The Hulk');
 
   let cap = new Superhero('Steve Rogers', 'Captain America', 'a neat shield');
-  t.is(cap.desc(), 'Steve Rogers, A.K.A. "CAPTAIN AMERICA", has a neat sheild.');
+  t.is(cap.desc(), 'Steve Rogers, A.K.A. "CAPTAIN AMERICA", has a neat shield');
 
   cap.alias = 'The Captain';
 
-  t.is(cap.desc(), 'Steve Rogers, A.K.A. "THE CAPTAIN", has a neat sheild.');
+  t.is(cap.desc(), 'Steve Rogers, A.K.A. "THE CAPTAIN", has a neat shield');
   t.is(cap.alias, 'THE CAPTAIN');
 });
 
