@@ -114,6 +114,10 @@ __Reference__
   year, the "Stage 4" proposals get collected, frozen, and turned into the
   next version of ECMAScript. ("ES6" is really "ES2015", for instance.)
 
+- [Kangax's ES6 Compatibility Tables](http://kangax.github.io/compat-table/es6/)
+  provide a comprehensive overview of the state of ES6 support in major browers
+  and server-side JavaScript runtimes.
+
 __Books / Articles__
 
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) is an
