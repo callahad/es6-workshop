@@ -13,6 +13,7 @@
   "author": "Dan Callahan <dan.callahan@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ava": "^0.14.0"
+    "ava": "^0.14.0",
+    "pouchdb": "^5.3.2"
   }
 }

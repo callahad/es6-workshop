@@ -118,7 +118,7 @@ __Reference__
   provide a comprehensive overview of the state of ES6 support in major browers
   and server-side JavaScript runtimes.
 
-__Books / Articles__
+__Books / Articles / Other__
 
 - [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS) is an
   exceptional series of books on modern JavaSCript. Free to read online.
@@ -129,3 +129,6 @@ __Books / Articles__
 - [We Have a Problem With Promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
   is the best article I've seen regarding common beginner and advanced mistakes
   when using Promises.
+
+- My [presentation on Promises](https://github.com/callahad/tccc19-async), which
+    includes the PouchDB callbacks to promises example in its `demos/` folder
