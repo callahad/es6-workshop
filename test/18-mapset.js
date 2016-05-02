@@ -28,12 +28,12 @@ test.skip('Maps are like Objects, but can use anything as a key', t => {
 
   // You can even use Objects as keys to Maps
   m.set(o, 'wow');
-  t.is(m.get(o, 'wow'));
+  t.is(m.get(o), 'wow');
 
   // Keys are based on identity, rather than value, so this still works:
   o['anotherKey'] = 'something new';
   o['42'] = 'something changed';
-  t.is(m.get(o, 'wow'));
+  t.is(m.get(o), 'wow');
 });
 
 test.skip('Maps are iterable', t => {
@@ -62,7 +62,7 @@ test.skip('Maps are iterable', t => {
 test.skip('ES6 also has Sets, which work similarly to Maps', t => {
   let s = new Set([2,3,3,1,1,3,2,1,3]);
 
-  t.deepEqual(Array.from(s), __);
+  t.deepEqual(Array.from(s).sort(), ___);
 
   // You can test for set membership
   t.true(s.has(__));
