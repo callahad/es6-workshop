@@ -98,6 +98,12 @@ If you need to experiment, there are three great places to do so:
     If you find yourself asking what some new syntax actually means, plugging it
     into Babel and trying to decipher the output is a great place to start.
 
+4. [PromiSEES](https://bevacqua.github.io/promisees)
+
+    PromiSEES is an online, interactive visualization of Promise chains. It has
+    several pre-loaded examples that you can step through, or you can load your
+    own code and see how it works.
+
 ## Other Resources
 
 This workshop just scratches the tip of the iceberg. Here are some other
@@ -131,4 +137,10 @@ __Books / Articles / Other__
   when using Promises.
 
 - My [presentation on Promises](https://github.com/callahad/tccc19-async), which
-    includes the PouchDB callbacks to promises example in its `demos/` folder
+  includes the PouchDB callbacks to promises example in its `demos/` folder
+
+- [Rollup.js](http://rollupjs.org/) is a JavaScript compiler that accepts files
+  written as ES6 modules, and then generates a single, combined file in a format
+  of your choice. It's less mainstream than Webpack or Browserify, but the
+  interactive examples on its homepage are a good way to understand the future
+  of standardized, modular JavaScript.
