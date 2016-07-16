@@ -7,10 +7,11 @@ test.skip('`var` is function-scoped', t => {
 
   var x = 1;
   {
-    var x = 2;   t.is(x, 2);
+    var x = 2;
+    t.is(x, 2);
   }
 
-  t.is(x, ___);
+  t.is(x, ___); // <-- TODO: Fill in the blank
 });
 
 test.skip('`let` and `const` are block-scoped', t => {
@@ -20,10 +21,11 @@ test.skip('`let` and `const` are block-scoped', t => {
 
   let x = 1;
   {
-    let x = 2;   t.is(x, 2);
+    let x = 2;
+    t.is(x, 2);
   }
 
-  t.is(x, ___);
+  t.is(x, ___); // <-- TODO: Fill in the blank
 });
 
 // ============================================================================

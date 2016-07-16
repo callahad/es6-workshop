@@ -13,7 +13,8 @@
   "author": "Dan Callahan <dan.callahan@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ava": "^0.14.0",
-    "pouchdb": "^5.3.2"
+    "ava": "^0.15.0",
+    "isomorphic-fetch": "^2.2.1",
+    "pouchdb": "^5.4.0"
   }
 }

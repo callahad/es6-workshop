@@ -15,6 +15,7 @@ test.skip('Destructuring lets you reach inside objects', t => {
 
   let colors = { red: '#ff0000', green: '#00ff00', blue: '#0000ff' };
 
+  // TODO: Fill in the blank, selecting only red and blue from of the object.
   let { __ } = colors;
 
   t.is(red, '#ff0000');

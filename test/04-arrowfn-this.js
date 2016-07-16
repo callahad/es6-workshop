@@ -1,5 +1,9 @@
 import test from 'ava';
 
+/*************************************************************************
+ * Note: `this` in JavaScript is confusing. Feel free to skip this file. *
+ *************************************************************************/
+
 test.skip('`this` is resolved based on calling context', t => {
   let x = {
     value: 789,
@@ -101,4 +105,5 @@ test.skip('Exercise: Use arrow functions instead of `var that = this`', t => {
 // - Because arrow functions don't have those variables:
 //     - `this` is resolved lexically, up the scope chain.
 //     - `.bind` has no effect.
-// - A common practice is to set `var that = this`. Try arrow functions instead.
+// - A common practice is to set `var that = this` before callback functions,
+//   so they have access to the outer `this` value. Try arrow functions instead.

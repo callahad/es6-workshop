@@ -1,19 +1,30 @@
 import test from 'ava';
 
 test.skip('You can use `...name` to collect extra params into an array', t => {
-  let sumArgs = (...nums) => nums.reduce((a, b) => a + b, 0);
+  // Note: .reduce is an array method common in functional style programming.
+  // In this case, we're using reduce to add all of the numbers in an array.
+  let sumArray = (nums) => nums.reduce((a, b) => a + b, 0);
+  t.is(sumArray([1, 2, 3]), 6);
 
-  t.is(sumArgs(1, 2, 3), __); // <-- Notice that I'm *not* passing an array.
+  // TODO: Fill in the blank
+  // Note: Using '...' collects paramters into an array for us
+  let sumArgs = (...nums) => nums.reduce((a, b) => a + b, 0);
+  t.is(sumArgs(__), 6);
 });
 
 test.skip('You can use `...array` to explode an array into separate params', t => {
+  // Note: sumThree expects to be called with 3 parameters
   let sumThree = (a, b, c) => a + b + c;
+  t.is(sumThree(1, 2, 3), 6);
 
-  t.is(sumThree(1, 2, 3), __);
+  // If `...` in a function definition collects values _into_ an array,
+  // what might `...` do in a function _call_?
 
+  // TODO: Fill in the blank.
+  // Remember: In a function definition, `...` collects values into an array,
+  // but in a function call, it does something different...
   let args = [7, 8, 9];
-
-  t.is(sumThree(...args), __);
+  t.is(sumThree(__), 6);
 });
 
 test.skip('Exercise: Use `...` to both spread and collect parameters', t => {
@@ -28,7 +39,7 @@ test.skip('Exercise: Use `...` to both spread and collect parameters', t => {
   t.is(Number.parseInt('77', 8), 63); // Octal 0o77
   t.is(Number.parseInt('11', 2), 3); // Binary 0b11
 
-  // Can you make a function that passes the following test cases?
+  // TODO: Can you make a function that passes the following test cases?
   // Hint: Use `...` to both collect and spread parameters.
   // Hint: Arrays have a `.map` method that applies a function to each element.
   //   e.g. `[1, 2, 3].map(x => x * 2)` returns `[2, 4, 6]`

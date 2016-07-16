@@ -23,8 +23,7 @@ test.skip('Functions can have default arguments', t => {
   t.is(bar(['a', 'b', 'c']), "a, b, c");
   t.is(bar(['a', 'b', 'c'], "|"), "a|b|c");
 
-  // Write a function, greet, which returns the strings below:
-
+  // TODO: Write a function, greet, which returns the strings below:
   function greet(___) {
     return `__`;
   }
@@ -52,23 +51,22 @@ test.skip('Default parameters get evaluated every time they are needed', t => {
 
   // What would you expect this function to return? Fill in the blanks below.
 
-  function append(x, ary = new Array()) {
+  function push(x, ary = new Array()) {
     ary.push(x);
     return ary;
   }
 
-  // Does each invocation get its own `new Array()`?
+  // TODO: Fill in the blanks. Does each invocation get its own `new Array()`?
+  t.deepEqual(__, push('foo'));
+  t.deepEqual(__, push('bar'));
+  t.deepEqual(__, push('bar', push('foo')));
 
-  t.deepEqual(append('foo'), __);
-  t.deepEqual(append('bar'), __);
-  t.deepEqual(append('bar', append('foo')), __);
-
-  // What if we pass our own array? Note that this ignores the return value...
+  // What if we pass in an array?
   let a = new Array();
-  append('foo', a);
-  append('bar', a);
-  append('baz', a);
-  t.deepEqual(a, __); // <-- Fill in the blank
+  push('foo', a);
+  push('bar', a);
+  push('baz', a);
+  t.deepEqual(__, a); // <-- Fill in the blank
 });
 
 // ============================================================================

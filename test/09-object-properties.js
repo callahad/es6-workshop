@@ -26,42 +26,45 @@ test.skip('Review: Property access on objects', t => {
 test.skip('Objects gained `[]` syntax for generating key names', t => {
   // Just like the example above, you can now use `[]` when defining keys.
 
-  let key = __; // <-- What does this need to be for the test to pass?
+  // TODO: Read the rest of this test, then fill in the blank
+  let key = __;
 
+  // TODO: Fill in the two blanks
+  // Remember: Strings have .toLowerCase() and .toUppercase() methods...
   let obj = {
-    [key]: 'This Is Cool',
-    [key.__]: 'this is cool', // <-- You can still compute things inside `[]`...
-    [key.__]: 'THIS IS COOL',
+    [key]: 'Foo',
+    [key.__]: 'Bar',
+    [key.__]: 'Baz',
   };
 
-  t.is(obj.Wow, 'This Is Cool');
-  t.is(obj.wow, 'this is cool');
-  t.is(obj.WOW, 'THIS IS COOL');
+  t.deepEqual(obj, {
+    'Test': 'Foo',
+    'test': 'Bar',
+    'TEST': 'Baz'
+  });
 });
 
 test.skip('Object property / values pairs have a new shorthand', t => {
-  // Ever caught yourself doing something like this?
+  // Do you ever end up repeating yourself when constructing objects?
 
   let name = 'Dan';
   let browser = 'Firefox';
 
-  let user = {
-    'name': name,
-    'browser': browser
-  };
+  let foo = { name: name, browser: browser }; // <-- Much repetition!
 
-  t.is(user.name, 'Dan');
-  t.is(user.browser, 'Firefox');
+  t.is(foo.name, 'Dan');
+  t.is(foo.browser, 'Firefox');
 
-  // The `'name': name` stuff is redundant. ES2015 provides a shorthand:
+  // ES2015 has a shorthand!
 
-  let snack = 'apple slices';
-  let drink = 'apple juice';
+  let bar = { name, browser };
 
-  let appletown = { snack, drink }; // <-- Implies, e.g., `{ "snack": snack }`.
+  // TODO: Fill in the blanks
+  t.is(bar.__, 'Dan');
+  t.is(bar.__, 'Firefox');
 
-  t.is(appletown.snack, __);
-  t.is(appletown["__"], 'apple juice');
+  // The results are the same:
+  t.deepEqual(foo, bar);
 });
 
 test.skip('Objects now have shorthand for declaring methods', t => {
@@ -75,10 +78,11 @@ test.skip('Objects now have shorthand for declaring methods', t => {
   t.is(utils.increment(1), 2);
   t.is(utils.double(2), 4);
 
-  // The object below is throwing an exception. Can you figure out why?
+  // TODO: The object below is throwing an exception. Can you figure out why?
   // Does converting `sign` to object literal shorthand function fix it?
-  // What does this tell you about the difference between arrow functions and
-  // function shorthand inside object literals?
+  //
+  // Do object literal functions act like normal functions or arrow functions?
+  // (Meaning: do they have a `this` binding or not?)
 
   let guestbook = {
     guests: [],

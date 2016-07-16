@@ -3,21 +3,23 @@ import test from 'ava';
 test.skip('`=>` is shorthand for a function', t => {
   // ES2015 introduces `=>` as a shorthand for creating functions.
 
-  let x = function(who) { return 'Hello, ' + who; }
-  let y = (__) => { return ___; } // <-- Fill in the blanks
+  let greet = function(who) { return 'Hello, ' + who; }
+  t.is(greet('world'), 'Hello, world');
 
-  t.is(x('world'), 'Hello, world');
-  t.is(y('world'), 'Hello, world');
+  // TODO: Fill in the blanks
+  let bye = (__) => { return ___; }
+  t.is(bye('world'), 'Goodbye, world');
 });
 
 test.skip('`=>` without `{}` implicitly returns', t => {
   // If you omit the `{ }` braces, arrow functions implicitly return results.
 
-  let y = (who) => { return 'Hello, ' + who };
-  let z = (__) => ___; // <-- Fill in the blanks. Do not use `{}`.
+  let greet = (who) => 'Hello, ' + who;
+  t.is(greet('world'), 'Hello, world');
 
-  t.is(y('world'), 'Hello, world');
-  t.is(z('world'), 'Hello, world');
+  // TODO: Fill in the blanks
+  let bye = (__) => ___;
+  t.is(bye('world'), 'Hello, world');
 });
 
 test.skip('Exercise: Re-writing a filter chain', t => {
@@ -57,8 +59,8 @@ test.skip('Exercise: Re-writing a filter chain', t => {
 
   t.deepEqual(fnChairs, ['Steel', 'Concrete', 'Wood']);
 
-  // Re-write the chain of filters above, but using `=>` instead of `function`.
-
+  // TODO: Re-write the chain of filters above.
+  // Don't use `function` or `return`. Use `=>` instead.
   let arrowChairs = ___
 
   t.deepEqual(arrowChairs, ['Steel', 'Concrete', 'Wood']);

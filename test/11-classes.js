@@ -19,7 +19,7 @@ test.skip('Review: prototypes as classes', t => {
 
   // Changing the prototype changes all of its instances
   // (They were all just referencing the value on the prototype...)
-  
+
   Greeter.prototype.hello = function() { return `Hi, ${this.who}`; };
 
   t.is(world.hello(), __);

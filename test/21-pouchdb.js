@@ -2,6 +2,11 @@ import test from 'ava';
 import PouchDB from 'pouchdb';
 import memdown from 'memdown';
 
+// PouchDB is a JavaScript implementation of CouchDB. It's pretty neat.
+// It also has an API that lets you choose between callbacks or promises,
+// so it's great for demonstrating the difference between the two.
+// More info at https://pouchdb.com/
+
 test.beforeEach(t => {
   t.context.db = new PouchDB('mydb', { db: memdown });
 });
@@ -50,7 +55,7 @@ test.cb.skip('Example: PouchDB works with callbacks', t => {
   // Any failure along the line would have caused the test to blow up.
 });
 
-test('...and it also works with Promises!', t => {
+test.skip('...and it also works with Promises!', t => {
   // Boilerplate for the test framework...
   t.plan(1);
   let fail = (err) => { t.fail(err); };
@@ -77,18 +82,16 @@ test('...and it also works with Promises!', t => {
   //    });
   //
 
-  // Your assignment: Try to re-write the above using promises
-  // Remember: you can centralize all error handling with a downstream `.catch`
+  // Your assignment: Try to re-write the first test in this file using promises
+  // Remember: you can centralize all error handling with a single `.catch`
   // You should be able to do it in 4 lines, short lines.
   // I've included an example answer at the bottom of this file.
 
   let db = t.context.db;
   return db.post({'hello': 'world'})
-    // <-- Start writing here...
-    .then(result => db.get(result.id))
-    .then(doc => db.remove(doc))
-    .then(deleted => pass(deleted.ok))
-    .catch(err => fail(err))
+    // <-- TODO: Start writing your solution on this line
+    // Your first line should start .then(result => __)
+    // Compare your solution to the one at the bottom of this file
 });
 
 // ============================================================================
@@ -96,7 +99,7 @@ test('...and it also works with Promises!', t => {
 // REVIEW:
 // - Promises are awesome. PouchDB is awesome.
 
-/*
+/* Example solution below...
  *
  *
  *

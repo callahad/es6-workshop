@@ -14,14 +14,14 @@ test.skip('Objects now have shorthand for property getters and setters', t => {
   t.is(party.size, '3 People');
 
   // Use this strategy to create a person object that exaggerates their height,
-  // unless they're already 6' (72") tall. Then tell the truth.
-  // If someone tries to set their height, `throw "No cheating"`.
+  // unless they're already 6' (72") tall, then tell the truth.
+  // If someone tries to set / modify their height, `throw "No cheating"`.
 
   function create_person(inches) {
     return {
       actual: inches,
 
-      // Your methods go in here...
+      // TODO: Your methods go in here...
     }
   }
 

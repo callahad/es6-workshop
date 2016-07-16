@@ -4,7 +4,7 @@
 
 __Prerequisites__
 
-To run this workshop, you need [Node.js](https://node.js.org) v5 or greater.
+To run this workshop, you need [Node.js](https://node.js.org) v6 or greater.
 
 I also strongly recommend [Firefox Developer Edition](https://firefox.com/developer/):
 JavaScript engines in browsers get updated far more frequently than Node does.

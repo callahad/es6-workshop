@@ -30,16 +30,17 @@ test.skip('template literals have super powers', t => {
   t.true(a !== c);
 
   // What is `a`? What did `c` turn into?
-  t.is(a, __); // <-- Fill in the blank with single-quoted string
-  t.is(c, __); // <-- Fill in the blank with single-quoted string
+  // TODO: Fill in the blanks with normal, single-quoted strings.
+  t.is(a, __);
+  t.is(c, __);
 });
 
 test.skip('template literals can span multiple lines', t => {
   // Unlike normal strings, template literals can run across several lines.
-  // Try filling in the blank below, without using the `\n` escape character.
+  // Try filling in the blank below, without typing the `\n` escape character.
   let x = `__`;
 
-  t.is(x, 'Hello,\n  world!');
+  t.is(x, 'Hello,\n  world');
 });
 
 test.skip('template literals can compute arbitrary values', t => {
@@ -47,9 +48,11 @@ test.skip('template literals can compute arbitrary values', t => {
 
   let what = 'hello, world';
 
+  // TODO: Fill in the blank
   let x = `I like shouting "${__}!"`;
   t.is(x, 'I like shouting "HELLO, WORLD!"');
 
+  // TODO: Fill in the blanks, using only letters, spaces, and the + sign.
   let a = 1;
   let b = 2;
   t.is(`${__} + ${__} = ${__}`, '1 + 2 = 3')
@@ -62,7 +65,8 @@ test.skip('Exercise: Construct a complex string', t => {
     keynotes: ['Denise Jacobs', 'Sara Wachter-Boettcher']
   }
 
-  let x = `In ${__}, ${__} had ${__} keynotes.`;
+  // TODO: Fill in the blanks. Don't forget about the `.join` method on arrays!
+  let x = `In ${__}, ${__} had ${__} keynote speakers.`;
   let y = `The speakers were: ${__}.`;
 
   t.is(x, 'In 2016, MinneWebCon had 2 keynotes.');
