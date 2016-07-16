@@ -109,8 +109,8 @@ __Reference__
   is the gold standard for JavaScript documentation. And it's a wiki, so you can
   contribute, too!
 
-- [tc39/ecma262](https://github.com/tc39/ecma262) is the working repository for
-  the standards committee behind JavaScript (officially "ECMAScript"). Every
+- [tc39/proposals](https://github.com/tc39/proposals) is the working repository
+  for the standards committee behind JavaScript (officially "ECMAScript"). Every
   year, the "Stage 4" proposals get collected, frozen, and turned into the
   next version of ECMAScript. ("ES6" is really "ES2015", for instance.)
 
