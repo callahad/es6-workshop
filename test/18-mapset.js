@@ -54,7 +54,7 @@ test.skip('Maps are iterable', t => {
   t.deepEqual(a, ['UMN', 'MWC', 'CSP']);
 
   let b = Array.from(__);
-  t.deepEqual(a, ['University of Minnesota',
+  t.deepEqual(b, ['University of Minnesota',
                   'MinneWebCon',
                   'Content Security Policy']);
 });
