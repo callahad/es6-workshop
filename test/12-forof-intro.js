@@ -82,7 +82,7 @@ test.skip('Objects can be iterated using helpers', t => {
   let obj = {x: 'Foo', y: 'Bar', z: 'Baz' };
 
   let ks = [];
-  for (k of __) { // <-- Fill in the blank
+  for (let k of __) { // <-- Fill in the blank
     ks.push(k);
   }
 
