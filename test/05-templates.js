@@ -66,7 +66,7 @@ test.skip('Exercise: Construct a complex string', t => {
   }
 
   // TODO: Fill in the blanks. Don't forget about the `.join` method on arrays!
-  let x = `In ${__}, ${__} had ${__} keynote speakers.`;
+  let x = `In ${__}, ${__} had ${__} keynotes.`;
   let y = `The speakers were: ${__}.`;
 
   t.is(x, 'In 2016, MinneWebCon had 2 keynotes.');
